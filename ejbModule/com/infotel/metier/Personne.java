@@ -18,7 +18,7 @@ public class Personne implements Serializable{
 	private String nom;
 	private String prenom;
 	private int age;
-	@OneToMany(mappedBy="lotissements")
+	@OneToMany(mappedBy="personne")
 	private List<Lotissement>lotissements =new ArrayList<Lotissement>();
 	@OneToOne (mappedBy="personne")
 	private Personne personne;
