@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 @Entity
 public class Personne implements Serializable{
 	@Id
@@ -17,8 +18,10 @@ public class Personne implements Serializable{
 	private String nom;
 	private String prenom;
 	private int age;
-	@OneToMany(mappedBy="personne")
+	@OneToMany(mappedBy="lotissements")
 	private List<Lotissement>lotissements =new ArrayList<Lotissement>();
+	@OneToOne (mappedBy="personne")
+	private Personne personne;
 	
 	public List<Lotissement> getLotissements() {
 		return lotissements;
