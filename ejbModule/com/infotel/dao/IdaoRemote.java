@@ -12,7 +12,7 @@ public interface IdaoRemote {
 	public Personne getPersonne (long idPersonne);
 	public Personne affichagePersonne(long idPersonne);
 	public void supprimerPersonne (Personne p);
-	public int modifierPersonne (Personne p);
+	public void modifierPersonne (Personne p);
 	public List<Personne> findAllPersonnes();
 	
 	
@@ -20,6 +20,12 @@ public interface IdaoRemote {
 	public Lotissement getLotissement (long idLot);
 	public Lotissement affichageLotissement(long idLot);
 	public void supprimerLotissement (Lotissement l);
-	public int modifierLotissement (Lotissement l);
+	public void modifierLotissement (Lotissement l);
 	public List<Lotissement> findAllLotissements();
+	
+	
+	
+
+	public void acheterLotissement(Personne p,Lotissement l);
+	public void SeMarier(Personne p1,Personne p2);
 }

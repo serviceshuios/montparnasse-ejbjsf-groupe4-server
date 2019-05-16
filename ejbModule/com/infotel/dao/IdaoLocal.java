@@ -20,6 +20,10 @@ public interface IdaoLocal {
 	public Lotissement getLotissement (long idLot);
 	public Lotissement affichageLotissement(long idLot);
 	public void supprimerLotissement (Lotissement l);
-	public int modifierLotissement (Lotissement l);
+	public void modifierLotissement (Lotissement l);
 	public List<Lotissement> findAllLotissements();
+	
+	
+	public void acheterLotissement(Personne p,Lotissement l);
+	public void SeMarier(Personne p1,Personne p2);
 }
